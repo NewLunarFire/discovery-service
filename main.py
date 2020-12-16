@@ -74,6 +74,7 @@ async def hello(websocket, path):
             print(rooms[r])
 
 port = int(os.environ.get("PORT") or 8765)
+print(f"Listening on port {port}")
 start_server = websockets.serve(hello, "localhost", port)
 
 asyncio.get_event_loop().run_until_complete(start_server)
