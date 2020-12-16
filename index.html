@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket test</title>
+        <meta charset="utf-8" />
+        <script defer src="script.js"></script>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: row;
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>WebSocket test</h1>
+        <div class="container">
+            <div>
+                <button id="create_room_button">Create room</button>
+            </div>
+            <div>
+                <input type="text" id="join_room_id" placeholder="Room ID"></input>
+                <button id="join_room_button">Join room</button>
+            </div>
+        </div>
+        <div>
+            Room ID: <span id="room_id"></span>
+        </div>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
