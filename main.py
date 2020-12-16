@@ -2,6 +2,7 @@
 import asyncio
 import json
 import random
+import os
 import string
 from uuid import UUID, uuid4
 import websockets
@@ -72,7 +73,8 @@ async def hello(websocket, path):
         for r in rooms:
             print(rooms[r])
 
-start_server = websockets.serve(hello, "localhost", 8765)
+port = int(os.environ.get("PORT") or 8765)
+start_server = websockets.serve(hello, "localhost", port)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
